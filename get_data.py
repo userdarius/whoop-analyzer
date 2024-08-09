@@ -1,7 +1,5 @@
 import json
 from whoop import WhoopClient
-import json
-from whoop import WhoopClient
 
 username = "EMAIL"
 password = "PASSWORD"
