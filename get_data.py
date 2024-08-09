@@ -142,3 +142,48 @@ def get_sleep_collection(username, password, start_date):
         json.dump(sleeps, f, indent=4)
 
     print(f"Found {len(sleeps)} sleeps and saved them to `sleeps.json`")
+
+
+def main():
+    # Ask the user what function they want to run
+    print("Choose a function to run:")
+    print("1. Get body measurement")
+    print("2. Get cycle by ID")
+    print("3. Get cycle collection")
+    print("4. Get workout by ID")
+    print("5. Get workout collection")
+    print("6. Get recovery for cycle")
+    print("7. Get recovery collection")
+    print("8. Get sleep by ID")
+    print("9. Get sleep collection")
+
+    choice = input("Enter the number of the function you want to run: ")
+
+    if choice == "1":
+        get_body_measurement(username, password)
+    elif choice == "2":
+        cycle_id = input("Enter the cycle ID: ")
+        get_cycle_by_id(username, password, cycle_id)
+    elif choice == "3":
+        get_cycle_collection(username, password, start_date)
+    elif choice == "4":
+        workout_id = input("Enter the workout ID: ")
+        get_workout_by_id(username, password, workout_id)
+    elif choice == "5":
+        get_workout_collection(username, password, start_date)
+    elif choice == "6":
+        cycle_id = input("Enter the cycle ID: ")
+        get_recovery_for_cycle(username, password, cycle_id)
+    elif choice == "7":
+        get_recovery_collection(username, password, start_date)
+    elif choice == "8":
+        sleep_id = input("Enter the sleep ID: ")
+        get_sleep_by_id(username, password, sleep_id)
+    elif choice == "9":
+        get_sleep_collection(username, password, start_date)
+    else:
+        print("Invalid choice. Please enter a number between 1 and 6.")
+
+
+if __name__ == "__main__":
+    main()
