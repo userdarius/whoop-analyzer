@@ -4,7 +4,7 @@ from whoop import WhoopClient
 username = "EMAIL"
 password = "PASSWORD"
 
-start_date = "2022-10-12 23:59:59.999999"
+start_date = "2024-08-10 23:59:59.999999"
 
 
 def get_body_measurement(username, password):
